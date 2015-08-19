@@ -8,7 +8,7 @@ provisioner:
   name: ansible_playbook
   hosts: test-kitchen
   roles_path: roles
-  playbook: default.yml
+  playbook: playbooks/st2express.yaml
 
 platforms:
 #  - name: ubuntu-12.04
