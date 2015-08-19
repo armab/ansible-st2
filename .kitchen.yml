@@ -1,0 +1,24 @@
+---
+driver:
+  name: docker
+  cutomize:
+    memory: 2048
+
+provisioner:
+  name: ansible_playbook
+  hosts: test-kitchen
+  roles_path: roles
+  playbook: default.yml
+
+platforms:
+#  - name: ubuntu-12.04
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      #- recipe[test-kitchen-test]
+    attributes:
+
+verifier:
+  ruby_bindir: '/usr/bin'
