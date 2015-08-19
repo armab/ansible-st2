@@ -1,8 +1,12 @@
-# Ansible-st2
+Ansible-StackStorm
+===========================
+
 Ansible playbooks to deploy [StackStorm](https://github.com/stackstorm/st2).
 > [StackStorm](http://stackstorm.com/) is event-driven automation platform written in Python.
 With over [50+ integrations](https://github.com/StackStorm/st2contrib/tree/master/packs) like GitHub, Docker, Nagios, NewRelic, AWS, Ansible it allows you to wire together your existing infrastructure into complex Workflows with auto-remediation and many more.
 Aka IFTTT orchestration for Ops.
+
+[![Circle CI Build Status](https://circleci.com/gh/StackStorm/ansible-st2/tree/master.svg?style=shield)](https://circleci.com/gh/StackStorm/ansible-st2/tree/master)
 
 ## Supported platforms
 * Ubuntu 12.04
