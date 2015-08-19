@@ -4,4 +4,15 @@ machine:
 
 test:
   override:
-    - bundle exec kitchen verify
+    -
+      ? |
+        case $CIRCLE_NODE_INDEX in
+        0)
+          bundle exec kitchen test ubuntu-14.04
+        ;;
+        1)
+          bundle exec kitchen test ubuntu-12.04
+        ;;
+        esac
+      :
+        parallel: true
