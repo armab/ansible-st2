@@ -8,8 +8,8 @@ install:
   - sudo echo "deb http://download.virtualbox.org/virtualbox/debian precise contrib" | sudo tee -a /etc/apt/sources.list
   - wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
   - sudo apt-get update
-  - sudo apt-get -y install linux-headers-3.16.0-31-generic
-  - sudo apt-get -y install virtualbox-4.2
+  - sudo apt-get -y install build-essential linux-headers-generic dkms
+  - sudo apt-get -y install virtualbox-4.3
   - VBoxManage -v
   - gem uninstall bundler --version 1.10.6
   - gem install bundler --version 1.10.5 --no-rdoc --no-ri
@@ -19,5 +19,5 @@ install:
   #- vagrant plugin install vagrant-lxc
 
 script:
-  #- export VAGRANT_LOG=info
+  - export VAGRANT_LOG=info
   - bundle exec kitchen test ubuntu-12
