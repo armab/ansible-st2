@@ -25,5 +25,6 @@ script:
   - vagrant up
   - vagrant ssh-config
   - netstat -lan
+  - ssh vagrant@localhost -p 2222
   - telnet 192.168.10.13 22
   #- bundle exec kitchen test ubuntu-12
