@@ -7,7 +7,8 @@ services:
 
 install:
   - sudo apt-get update
-  - sudo gem install bundler -v 1.10.5 --no-rdoc --no-ri
+  - gem uninstall bundler
+  - gem install bundler --version 1.10.5 --no-rdoc --no-ri
   - bundle
   - sudo wget -nv https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
   - sudo dpkg -i vagrant_1.7.4_x86_64.deb
