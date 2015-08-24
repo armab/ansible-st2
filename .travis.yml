@@ -1,5 +1,8 @@
-language: ruby
 sudo: required
+
+language: ruby
+rvm:
+  - "1.9.3"
 
 services:
   - docker
