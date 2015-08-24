@@ -1,0 +1,22 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: ansible_playbook
+  hosts: test-kitchen
+  roles_path: roles
+  playbook: playbooks/st2express.yaml
+  ansible_verbose: true
+  ansible_verbosity: 3
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+    attributes:
+
+verifier:
+  ruby_bindir: '/usr/bin'
