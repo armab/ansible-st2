@@ -22,6 +22,8 @@ script:
   #- export VAGRANT_LOG=debug
   #- rm -rf Vagrantfile
   #- vagrant init ubuntu/trusty64
-  - vagrant ssh-config
   - vagrant up
+  - vagrant ssh-config
+  - netstat -lan
+  - telnet 192.168.10.13 22
   #- bundle exec kitchen test ubuntu-12
