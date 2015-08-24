@@ -19,7 +19,7 @@ install:
   #- vagrant plugin install vagrant-lxc
 
 script:
-  - export VAGRANT_LOG=info
+  - sudo export VAGRANT_LOG=debug
   - sudo vagrant init ubuntu/trusty64
   - sudo vagrant up
   #- bundle exec kitchen test ubuntu-12
