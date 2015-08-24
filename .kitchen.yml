@@ -15,6 +15,7 @@ platforms:
      driver:
        box: fgrehm/precise64-lxc
        provider: lxc
+       boot_timeout: 600
 
 suites:
   - name: default
