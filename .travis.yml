@@ -19,8 +19,9 @@ install:
   #- vagrant plugin install vagrant-lxc
 
 script:
-  - export VAGRANT_LOG=debug
-  - rm -rf Vagrantfile
-  - vagrant init ubuntu/trusty64
+  #- export VAGRANT_LOG=debug
+  #- rm -rf Vagrantfile
+  #- vagrant init ubuntu/trusty64
+  - vagrant ssh-config
   - vagrant up
   #- bundle exec kitchen test ubuntu-12
