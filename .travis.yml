@@ -19,9 +19,10 @@ install:
   #- vagrant plugin install vagrant-lxc
 
 script:
-  #- export VAGRANT_LOG=debug
-  #- rm -rf Vagrantfile
-  #- vagrant init ubuntu/trusty64
-  - vagrant init ubuntu/trusty32
+  - egrep '(vmx|svm)' /proc/cpuinfo
+  #- vagrant init ubuntu/trusty32
+  - vagrant init ubuntu/trusty64
   - vagrant up
+  - vagrant ssh-config
+  - netstat -lan
   #- bundle exec kitchen test ubuntu-12
