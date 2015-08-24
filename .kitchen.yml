@@ -1,6 +1,8 @@
 ---
 driver:
   name: vagrant
+  driver:
+    provider: lxc
 
 provisioner:
   name: ansible_playbook

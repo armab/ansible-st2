@@ -1,7 +1,9 @@
-sudo: required
 language: ruby
-rvm:
-  - "1.9.3"
+sudo: required
+
+services:
+  - docker
+
 install:
   - sudo apt-get update
   - gem install bundler -v 1.10.5 --no-rdoc --no-ri
