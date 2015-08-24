@@ -15,8 +15,7 @@ provisioner:
 platforms:
    - name: ubuntu-12.04
      driver:
-       box: precise-lxc
-       provider: lxc
+       box: fgrehm/precise64-lxc
 
 suites:
   - name: default
