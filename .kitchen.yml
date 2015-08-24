@@ -1,8 +1,6 @@
 ---
 driver:
   name: vagrant
-  driver:
-    provider: lxc
 
 provisioner:
   name: ansible_playbook
@@ -16,6 +14,7 @@ platforms:
    - name: ubuntu-12.04
      driver:
        box: fgrehm/precise64-lxc
+       provider: lxc
 
 suites:
   - name: default
