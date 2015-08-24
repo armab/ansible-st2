@@ -5,9 +5,13 @@ services:
   - docker
 
 install:
+  - sudo echo "deb http://download.virtualbox.org/virtualbox/debian precise contrib" | sudo tee -a /etc/apt/sources.list
+  - wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
   - sudo apt-get update
-  - sudo apt-get install lxc lxc-templates cgroup-lite redir
-  - gem uninstall bundler --version 1.10.6
+  - sudo apt-cache search linux-headers-virtual
+  - sudo apt-get -y install linux-headers-virtual
+  - sudo apt-get -y install virtualbox-4.2
+  - VBoxManage -v
   - gem install bundler --version 1.10.5 --no-rdoc --no-ri
   - bundle
   - sudo wget -nv https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb
