@@ -3,5 +3,6 @@
 source 'https://rubygems.org'
 
 gem 'test-kitchen'
-gem 'kitchen-docker-api'
+gem 'kitchen-docker'
+gem 'kitchen-vagrant'
 gem 'kitchen-ansible'
