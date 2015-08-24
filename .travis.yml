@@ -11,12 +11,13 @@ install:
   - sudo apt-get -y install linux-headers-3.16.0-31-generic
   - sudo apt-get -y install virtualbox-4.2
   - VBoxManage -v
+  - gem uninstall bundler --version 1.10.6
   - gem install bundler --version 1.10.5 --no-rdoc --no-ri
   - bundle
   - sudo wget -nv https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
   - sudo dpkg -i vagrant_1.7.4_x86_64.deb
-  - vagrant plugin install vagrant-lxc
+  #- vagrant plugin install vagrant-lxc
 
 script:
-  - export VAGRANT_LOG=info
+  #- export VAGRANT_LOG=info
   - bundle exec kitchen test ubuntu-12
