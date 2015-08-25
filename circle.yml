@@ -1,3 +1,7 @@
+machine:
+  environment:
+    VAGRANT_LOG: debug
+
 dependencies:
   cache_directories:
     - ~/.vagrant.d
