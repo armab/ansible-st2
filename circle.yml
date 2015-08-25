@@ -1,7 +1,7 @@
 dependencies:
   pre:
     - sudo apt-get update
-    - sudo apt-get install -y lxc lxc-templates cgroup-lite redir
+    - sudo apt-get install -y lxc lxc-templates
 
 test:
   override:
