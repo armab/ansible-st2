@@ -14,6 +14,7 @@ platforms:
 - name: ubuntu
   driver:
     lxc_directory: /usr/share/lxc/templates
+    base_container: ubuntu
     username: kitchen # defaults to "root"
     password: kitchen # defaults to "root"
 
