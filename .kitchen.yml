@@ -8,11 +8,12 @@ provisioner:
   roles_path: roles
   playbook: playbooks/st2express.yaml
   ansible_verbose: true
-  ansible_verbosity: 3
+  ansible_verbosity: 2
 
 platforms:
   - name: ubuntu-14.04
     driver_config:
+      privileged: true
       disable_upstart: false
       image: phusion/baseimage
       platform: ubuntu
