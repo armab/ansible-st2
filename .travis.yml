@@ -11,18 +11,20 @@ install:
   - sudo apt-get -y install build-essential linux-headers-`uname -r` dkms
   - sudo apt-get -y install virtualbox-4.3
   - VBoxManage -v
-  - gem uninstall bundler --version 1.10.6
-  - gem install bundler --version 1.10.5 --no-rdoc --no-ri
-  - bundle
+#  - gem uninstall bundler --version 1.10.6
+#  - gem install bundler --version 1.10.5 --no-rdoc --no-ri
+#  - bundle
   - sudo wget -nv https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
   - sudo dpkg -i vagrant_1.7.4_x86_64.deb
+  - sudo apt-get -y install sshpass
   #- vagrant plugin install vagrant-lxc
 
 script:
-  - egrep '(vmx|svm)' /proc/cpuinfo
   #- vagrant init ubuntu/trusty32
-  - vagrant init ubuntu/trusty64
+  #- vagrant init ubuntu/trusty64
   - vagrant up
   - vagrant ssh-config
   - netstat -lan
+  - sshpass -p 'vagrant' ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no vagrant@10.240.240.100 -p 22 'uname -a'
+  - sshpass -p 'vagrant' ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no vagrant@ansible-st2 -p 22 'uname -a'
   #- bundle exec kitchen test ubuntu-12
