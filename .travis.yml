@@ -5,6 +5,7 @@ services:
   - docker
 
 install:
+  - netstat -lan
   - sudo echo "deb http://download.virtualbox.org/virtualbox/debian precise contrib" | sudo tee -a /etc/apt/sources.list
   - wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
   - sudo apt-get update
@@ -20,6 +21,7 @@ install:
   #- vagrant plugin install vagrant-lxc
 
 script:
+  - netstat -lan
   #- vagrant init ubuntu/trusty32
   #- vagrant init ubuntu/trusty64
   - vagrant up
