@@ -12,9 +12,9 @@ provisioner:
 
 platforms:
   - name: ubuntu-12.04
-   driver:
-     box: precise-lxc
-     provider: lxc
+    driver:
+      box: precise-lxc
+      provider: lxc
 
 suites:
   - name: default
