@@ -11,10 +11,10 @@ provisioner:
   ansible_verbosity: 2
 
 platforms:
-  - name: ubuntu-14.04
-    driver:
-      provider: docker
-      image: ubuntu:14.04
+  - name: ubuntu-12.04
+   driver:
+     box: precise-lxc
+     provider: lxc
 
 suites:
   - name: default

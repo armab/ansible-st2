@@ -1,9 +1,3 @@
-machine:
-  services:
-    - docker
-  environment:
-    VAGRANT_DEFAULT_PROVIDER: docker
-
 dependencies:
   cache_directories:
     - ~/.vagrant.d
@@ -14,4 +8,4 @@ dependencies:
 
 test:
   override:
-    - bundle exec kitchen test ubuntu-14
+    - bundle exec kitchen test ubuntu-12
