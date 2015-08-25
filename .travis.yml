@@ -26,5 +26,4 @@ script:
   - vagrant ssh-config
   - netstat -lan
   - sshpass -p 'vagrant' ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no vagrant@10.240.240.100 -p 22 'uname -a'
-  - sshpass -p 'vagrant' ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no vagrant@ansible-st2 -p 22 'uname -a'
   #- bundle exec kitchen test ubuntu-12
