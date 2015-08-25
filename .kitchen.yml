@@ -14,9 +14,8 @@ platforms:
   - name: ubuntu-14.04
     driver_config:
       disable_upstart: false
-  - name: ubuntu-12.04
-    driver_config:
-      disable_upstart: false
+      image: phusion/baseimage
+      platform: ubuntu
 
 suites:
   - name: default
