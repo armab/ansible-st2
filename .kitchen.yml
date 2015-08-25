@@ -1,6 +1,6 @@
 ---
 driver:
-  name: vagrant
+  name: lxc
 
 provisioner:
   name: ansible_playbook
@@ -11,10 +11,10 @@ provisioner:
   ansible_verbosity: 2
 
 platforms:
-  - name: ubuntu-12.04
-    driver:
-      box: fgrehm/precise64-lxc
-      provider: lxc
+- name: ubuntu
+  driver_config:
+    username: kitchen # defaults to "root"
+    password: kitchen # defaults to "root"
 
 suites:
   - name: default

@@ -1,18 +1,8 @@
-machine:
-  environment:
-    VAGRANT_LOG: debug
-
 dependencies:
-  cache_directories:
-    - ~/.vagrant.d
-    - ~/.chefdk
   pre:
     - sudo apt-get update
     - sudo apt-get install -y lxc lxc-templates cgroup-lite redir
-    - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
-    - sudo dpkg -i vagrant_1.7.4_x86_64.deb
-    - vagrant plugin install vagrant-lxc
 
 test:
   override:
-    - bundle exec kitchen test ubuntu-12
+    - bundle exec kitchen test ubuntu
