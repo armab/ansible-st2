@@ -6,3 +6,4 @@ dependencies:
 test:
   override:
     - bundle exec kitchen test ubuntu
+
